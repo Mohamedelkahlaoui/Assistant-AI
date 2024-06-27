@@ -1,0 +1,228 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - troubleshoot_printer
+  - driver_issue
+  - pdf_issue
+  - printing_failure
+  - outlook_issue
+  - network_issue
+  - storage_issue
+  - power_issue
+  - change_password
+
+actions:
+  - action_chatgpt    
+
+responses:
+ 
+  utter_greet:
+  - text: "Bonjour Comment allez-vous ?"
+
+  utter_did_that_help:
+  - text: "Cela vous a-t-il aidé ?"
+  
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    # image: "https://i.imgur.com/nGF1K8f.jpg"
+
+
+  utter_happy:
+  - text: "Très bien, continuez !"
+
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "Je Suis un Assistant"
+
+  utter_default:
+    - text: "Je suis désolée, je n'ai pas compris. Pouvez-vous repeter, s'il vous plaît ?"
+  
+  utter_troubleshoot_printer:
+    - text: >
+        Dépannage classique :
+        1. Assurez-vous que le câble qui connecte l’imprimante à votre ordinateur est branché de façon sécurisée.
+        2. Tentez d’imprimer un fichier.
+        3. Si votre imprimante est connectée à un concentrateur USB, débranchez le câble d’imprimante à partir de la plateforme. Branchez ensuite le câble d’imprimante directement dans un port USB de l’ordinateur.
+        4. Mettez l’imprimante hors tension. Attendez 30 sec puis rallumez-la.
+
+  utter_driver_issue:
+    - text: >
+        Problème lié au pilote :
+        1. Trouvez le pilote correspondant à votre numéro de modèle puis l’installez en suivant les instructions du fabricant.
+        2. Redémarrez l’ordinateur.
+        3. Insérer une page Web des différents pilotes.
+
+  utter_pdf_issue:
+    - text: >
+        Problème des fichiers PDF :
+        1. Essayer d’imprimer en tant qu’image.
+        2. Copier ou télécharger à nouveau le fichier directement sur disque dur.
+        3. Créer une copie du fichier PDF à l’aide de la commande enregistrer sous.
+        4. Récréer le fichier PDF: Ouvrir le fichier dans le programme d’origine -> Imprimer, puis choisir l’option d’enregistrement en format PDF -> Ouvrir à nouveau le fichier puis essayer de l’imprimer à nouveau.
+
+  utter_printing_failure:
+    - text: >
+        Échec d'impression :
+        1. Adressage IP dynamique (switch/panneau d’adressage).
+        2. Non alimentation du problème avec l’ordinateur: donner une procédure et des étapes à suivre pour savoir le problème.
+
+  utter_outlook_issue:
+    - text: >
+        Outlook :
+        1. Expiration du mot de passe (le mot de passe n’a pas été changé avant la durée d’expiration - 
+            ne peut être connecté dans le réseau OEP pour continuer à avoir la session toujours accessible malgré 
+            l’expiration du mot de passe de modification des paramètres d’authentification).
+        2. Boîte BAL saturée qui contribue l’échange du lien -> déplacement ou l’archivage locale sur le disque (10G/20G est la taille optimale de chaque session d’archive).
+
+  utter_network_issue:
+    - text: >
+        Problème au niveau du réseau :
+        1. Connexion via câble -> voyant connecté.
+
+  utter_storage_issue:
+    - text: >
+        Échec du stockage :
+        1. Drive est plein.
+        2. Contactez IT Support.
+        3. Si le problème persiste, contactez le service de support technique.
+
+  utter_power_issue:
+    - text: >
+        Coupure électrique classique :
+        1. Vérifiez si le câble d’alimentation est branché à une prise électrique.
+        2. Vérifiez si l’interrupteur d’alimentation est allumé.
+        3. Vérifiez si l’alimentation est connectée à l’ordinateur.
+
+  utter_change_password:
+   - text: >
+         « Bien sûr, je peux vous aider à modifier votre mot de passe. Voici les étapes à suivre :
+         1. Cliquez sur ce lien pour visiter la page de réinitialisation du mot de passe : [page de réinitialisation du mot de passe]
+         2. Une fois sur la page, saisissez votre mot de passe actuel dans le champ « Mot de passe actuel ».
+         3. Saisissez votre nouveau mot de passe dans le champ « Nouveau mot de passe ».
+         4. Confirmez votre nouveau mot de passe en le saisissant à nouveau dans le champ « Confirmer le nouveau mot de passe ».
+         5. Cliquez sur le bouton « Modifier le mot de passe » pour modifier votre mot de passe.
+         6. Si vous rencontrez des problèmes, veuillez contacter le support informatique ».
+
+  utter_scanner_issue:
+    - text: >
+        Problèmes de scanner :
+        1. Assurez-vous que le scanner est correctement connecté à l'ordinateur via le port USB ou le réseau.
+        2. Vérifier que le scanner est sous tension.
+        3. Installez ou mettez à jour les pilotes du scanner à partir du site Web du fabricant.
+        4. Redémarrez l'ordinateur et réessayez de numériser.
+        5. Nettoyez la vitre du scanner et assurez-vous qu'il n'y a pas de taches ou de saletés.
+        6. Réglez les paramètres du scanner pour obtenir une résolution plus élevée.
+        7. Assurez-vous que le document à numériser est placé correctement sur le lit du scanner.
+
+  utter_wifi_issue:
+    - text: >
+        Problèmes de connectivité réseau :
+        1. Assurez-vous que le Wi-Fi est activé sur l'appareil.
+        2. Redémarrez le routeur Wi-Fi et l'appareil.
+        3. Oubliez le réseau Wi-Fi et reconnectez-vous en saisissant le mot de passe correct.
+        4. Assurez-vous que l'appareil est à portée du signal Wi-Fi.
+        5. Vérifiez si d'autres appareils rencontrent également des problèmes de réseau.
+        6. Redémarrez le routeur et le modem.
+        7. Vérifiez s'il existe des mises à jour du micrologiciel du routeur.
+        8. Contactez le fournisseur d'accès à Internet si le problème persiste.
+
+  utter_email_sync_issue:
+    - text: >
+        Problèmes liés au client de messagerie :
+        1. Assurez-vous que le client de messagerie est connecté à Internet.
+        2. Vérifiez les paramètres du compte de messagerie et assurez-vous que les détails du serveur sont corrects.
+        3. Effacez le cache du client de messagerie et redémarrez l'application.
+        4. Mettez à jour le client de messagerie avec la dernière version.
+        5. Vérifiez les paramètres des serveurs sortant et entrant.
+        6. Vérifiez si le quota d'e-mails est dépassé et supprimez les e-mails inutiles.
+        7. Assurez-vous qu'aucune pièce jointe volumineuse n'est à l'origine du problème.
+        8. Contactez le fournisseur de services de messagerie pour obtenir de l'aide.
+
+  utter_software_install_issue:
+    - text: >
+        Problèmes d'installation du logiciel :
+        1. Assurez-vous que le système répond à la configuration minimale requise pour le logiciel.
+        2. Exécutez le programme d'installation en tant qu'administrateur.
+        3. Désactivez temporairement tout logiciel antivirus et réessayez l'installation.
+        4. Vérifiez l'espace disque disponible sur le système et supprimez les fichiers inutiles.
+        5. Mettez à jour l'application avec la dernière version.
+        6. Réinstallez l'application.
+        7. Vérifiez s'il existe des mises à jour du système et installez-les.
+        8. Assurez-vous que toutes les dépendances et bibliothèques requises sont installées.
+        
+  utter_printer_blank_pages:
+    - text: >
+        Si votre imprimante imprime des pages blanches :
+        1. Assurez-vous que les cartouches d'encre ou de toner ne sont pas vides.
+        2. Exécutez le cycle de nettoyage de l'imprimante pour éliminer les buses obstruées.
+        3. Vérifiez les paramètres d'impression pour vous assurer que le format et le type de papier sélectionnés sont corrects.
+        4. Essayez d'imprimer une page de test pour diagnostiquer le problème.
+
+  utter_printer_paper_jam:
+    - text: >
+        Si votre imprimante se bloque fréquemment :
+        1. Assurez-vous que le papier est correctement chargé et qu'il n'est pas froissé ou humide.
+        2. Vérifiez qu'il n'y a pas de petits morceaux de papier coincés à l'intérieur de l'imprimante.
+        3. Utilisez le type et le grammage de papier recommandés par le fabricant.
+        4. Nettoyez régulièrement les rouleaux pour éliminer la poussière et les débris.
+
+  utter_app_not_responding:
+    - text: >
+        Si une application ne répond pas :
+        1. Fermez de force l'application et redémarrez-la.
+        2. Recherchez les mises à jour de l'application et installez-les.
+        3. Redémarrez l'ordinateur pour éliminer tout problème temporaire.
+        4. Vérifiez si d'autres applications ne sont pas à l'origine de conflits.
+        5. Contactez IT Support.
+
+  utter_slow_computer:
+    - text: >
+        Si votre ordinateur est lent :
+        1. Fermez les programmes et les onglets de navigateur inutiles.
+        2. Vérifiez la présence de logiciels malveillants ou de virus et supprimez-les.
+        3. Augmentez la mémoire virtuelle (fichier de pagination).
+        4. Mettez à niveau la mémoire vive ou le disque dur si possible.
+
+  utter_computer_wont_turn_on:
+    - text: >
+       Si votre ordinateur ne s'allume pas :
+        1. Vérifiez l'alimentation électrique et assurez-vous que le câble d'alimentation est bien branché.
+        2. Essayez une autre prise de courant ou un autre câble d'alimentation.
+        3. Vérifiez que les composants internes ne sont pas desserrés, si vous vous sentez à l'aise pour le faire.
+
+  utter_overheating_computer:
+    - text: >
+        Si votre ordinateur surchauffe :
+        1. Assurez-vous que l'ordinateur est placé dans un endroit bien ventilé.
+        2. Nettoyez les ventilateurs et les évents pour éliminer la poussière accumulée.
+        3. Réappliquez de la pâte thermique sur l'unité centrale si nécessaire.
+        4. Envisagez d'utiliser un coussin de refroidissement pour les ordinateurs portables.
+
+  utter_vpn_issue:
+    - text: >
+        Si vous avez des problèmes de connexion VPN :
+        1. Assurez-vous que le client VPN est à jour.
+        2. Vérifiez votre connexion Internet et redémarrez le routeur si nécessaire.
+        3. Vérifiez l'adresse du serveur VPN et les identifiants de connexion.
+        4. Essayez de vous connecter à un autre serveur VPN.
+
+  utter_bluetooth_issue:
+    - text: >
+        Si Bluetooth ne se connecte pas :
+        1. Assurez-vous que la fonction Bluetooth est activée sur les deux appareils.
+        2. Supprimez tout couplage existant et réessayez le couplage.
+        3. Vérifiez les mises à jour des pilotes de votre adaptateur Bluetooth.
+        4. Redémarrez les deux appareils et essayez de vous connecter à nouveau.             
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,100 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: troubleshoot printer path
+  steps:
+  - intent: troubleshoot_printer
+  - action: utter_troubleshoot_printer
+
+- story: driver issue path
+  steps:
+  - intent: driver_issue
+  - action: utter_driver_issue
+
+- story: pdf issue path
+  steps:
+  - intent: pdf_issue
+  - action: utter_pdf_issue
+
+- story: printing failure path
+  steps:
+  - intent: printing_failure
+  - action: utter_printing_failure
+
+- story: outlook issue path
+  steps:
+  - intent: outlook_issue
+  - action: utter_outlook_issue
+
+- story: network issue path
+  steps:
+  - intent: network_issue
+  - action: utter_network_issue
+
+- story: storage issue path
+  steps:
+  - intent: storage_issue
+  - action: utter_storage_issue
+
+- story: power issue path
+  steps:
+  - intent: power_issue
+  - action: utter_power_issue  
+
+- story: change password path
+  steps:
+  - intent: change_password
+  - action: utter_change_password
+  
+- story: scanner issue path
+  steps:
+  - intent: scanner_issue
+  - action: utter_scanner_issue
+
+- story: wifi issue path
+  steps:
+  - intent: wifi_issue
+  - action: utter_wifi_issue
+
+- story: email sync issue path
+  steps:
+  - intent: email_sync_issue
+  - action: utter_email_sync_issue
+
+- story: software install issue path
+  steps:
+  - intent: software_install_issue
+  - action: utter_software_install_issue
+
+- story: chatgpt response
+  steps:
+  - intent: ask_anything
+  - action: action_chatgpt  

@@ -1,0 +1,291 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - bonjour
+    - Bonjour
+    - Bonsoir
+    - Salut
+    - bonsoir
+    - salut
+
+- intent: goodbye
+  examples: |
+    - good bye
+    - good night
+    - bye
+    - goodbye
+    - au revoir
+    - bonne nuit
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - oui
+    - en effet
+    - bien sûr
+    - c'est une bonne chose
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - jamais
+    - Je ne pense pas
+    - je n'aime pas ça
+    - pas du tout
+    - pas vraiment
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - so so perfect
+    - so good
+    - so perfect
+    - parfait
+    - excellent
+    - extraordinaire
+    - si parfait
+    - si bon
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I'm so sad
+    - sad
+    - very sad
+    - so saad
+    - so sad
+    - ma journée a été horrible
+    - Je suis si triste
+    - triste
+    - très triste
+    - si triste
+    - si triste
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - êtes-vous un robot ?
+    - Êtes-vous un humain ?
+    - Est-ce que je parle à un robot ?
+    - Est-ce que je parle à un humain ?
+    
+- intent: troubleshoot_printer
+  examples: |
+    - My printer is not working
+    - I have an issue with my printer
+    - How do I fix my printer?
+    - Mon imprimante ne fonctionne pas
+    - J'ai un problème avec mon imprimante
+    - Comment réparer mon imprimante ?
+
+- intent: driver_issue
+  examples: |
+    - I have a driver problem
+    - How do I install a printer driver?
+    - My printer driver is not working
+    - J'ai un problème de pilote
+    - Comment installer un pilote d'imprimante ?
+    - Mon pilote d'imprimante ne fonctionne pas
+
+- intent: pdf_issue
+  examples: |
+    - I can't print PDF files
+    - How do I fix PDF printing issues?
+    - My PDF file is not printing correctly
+    - Je ne parviens pas à imprimer des fichiers PDF
+    - Comment résoudre les problèmes d'impression des fichiers PDF ?
+    - Mon fichier PDF ne s'imprime pas correctement
+
+- intent: printing_failure
+  examples: |
+    - My print job failed
+    - Why can't I print?
+    - Print job error
+    - Ma tâche d'impression a échoué
+    - Pourquoi ne puis-je pas imprimer ?
+    - Erreur d'impression
+
+- intent: outlook_issue
+  examples: |
+    - My Outlook is not working
+    - How do I fix Outlook password expiration?
+    - Outlook email issues
+    - Mon Outlook ne fonctionne pas
+    - Comment réparer l'expiration du mot de passe Outlook ?
+    - Problèmes de messagerie Outlook
+
+- intent: network_issue
+  examples: |
+    - I have a network problem
+    - Network connection issue
+    - Printer network issue
+    - J'ai un problème de réseau
+    - Problème de connexion au réseau
+    - Problème de réseau d'imprimante
+
+- intent: storage_issue
+  examples: |
+    - My drive is full
+    - Storage is full
+    - I can't save files
+    - Mon disque est plein
+    - La mémoire est pleine
+    - Je ne peux pas enregistrer de fichiers
+
+- intent: power_issue
+  examples: |
+    - I have a power problem
+    - Power outage issues
+    - My device is not powering up
+    - J'ai un problème d'électricité
+    - Problèmes de coupure de courant
+    - Mon appareil ne s'allume pas
+
+- intent: change_password
+  examples: |
+    - I need to change my password
+    - How do I reset my password?
+    - Help me change my password
+    - Je dois modifier mon mot de passe
+    - Comment réinitialiser mon mot de passe ?
+    - Aidez-moi à changer mon mot de passe
+    - Comment changer mon mot de passe ?
+
+- intent: scanner_issue
+  examples: |
+    - My scanner is not detected
+    - Scanner not working
+    - How do I fix my scanner?
+    - Scanned images are poor quality
+    - Mon scanner n'est pas détecté
+    - Le scanner ne fonctionne pas
+    - Comment réparer mon scanner ?
+    - Les images numérisées sont de mauvaise qualité
+
+- intent: wifi_issue
+  examples: |
+    - I can't connect to Wi-Fi
+    - Wi-Fi not working
+    - My network connection is unstable
+    - Je ne peux pas me connecter au Wi-Fi
+    - Le Wi-Fi ne fonctionne pas
+    - Ma connexion réseau est instable
+
+- intent: email_sync_issue
+  examples: |
+    - My emails are not syncing
+    - Can't send or receive emails
+    - Email client not working
+    - Mes e-mails ne sont pas synchronisés
+    - Impossible d'envoyer ou de recevoir des courriels
+    - Le client de messagerie ne fonctionne pas
+    - Comment synchroniser mes e-mails ?
+
+- intent: software_install_issue
+  examples: |
+    - Software installation failed
+    - Can't install software
+    - Application crashes on startup
+    - Échec de l'installation du logiciel
+    - Impossible d'installer le logiciel
+    - L'application se bloque au démarrage
+
+- intent: printer_blank_pages
+  examples: |
+    - My printer is printing blank pages
+    - Printer not printing correctly
+    - Why is my printer printing empty pages?
+    - Mon imprimante imprime des pages blanches
+    - L'imprimante n'imprime pas correctement
+    - Pourquoi mon imprimante imprime-t-elle des pages vides ?
+    - Comment réparer mon imprimante ?
+    - Comment reparer mon imprimante
+
+- intent: printer_paper_jam
+  examples: |
+    - My printer jams frequently
+    - Printer keeps jamming
+    - How to fix printer paper jams?
+    - Mon imprimante se bloque fréquemment
+    - L'imprimante ne cesse de se bloquer
+    - Comment réparer les bourrages de papier de l'imprimante ?
+    - Comment reparer les bourrages de papier de mon imprimante ?
+
+- intent: app_not_responding
+  examples: |
+    - My application is not responding
+    - App freezes
+    - Application won't work
+    - Mon application ne répond pas
+    - L'application se bloque
+    - L'application ne fonctionne pas
+
+- intent: slow_computer
+  examples: |
+    - My computer is very slow
+    - How to speed up my computer?
+    - Computer performance issues
+    - Mon ordinateur est tres lent
+    - Comment accélérer mon ordinateur ?
+    - Problèmes de performance de l'ordinateur
+
+
+- intent: computer_wont_turn_on
+  examples: |
+    - My computer won't turn on
+    - PC not starting
+    - Computer won't boot up
+    - Mon ordinateur ne s'allume pas
+    - L'ordinateur ne démarre pas
+    - L'ordinateur ne démarre pas
+    - ordinateur ne demarre pas
+
+- intent: overheating_computer
+  examples: |
+    - My computer is overheating
+    - PC gets too hot
+    - How to cool down my computer?
+    - Mon ordinateur surchauffe
+    - L'ordinateur devient trop chaud
+    - Comment refroidir mon ordinateur ?
+
+- intent: vpn_issue
+  examples: |
+    - VPN is not connecting
+    - Can't connect to VPN
+    - VPN connection issues
+    - Le VPN ne se connecte pas
+    - Impossible de se connecter au VPN
+    - Problèmes de connexion au VPN
+
+- intent: bluetooth_issue
+  examples: |
+    - Bluetooth not working
+    - Can't connect Bluetooth
+    - Bluetooth connection issues
+    - Bluetooth ne fonctionne pas
+    - Impossible de se connecter au Bluetooth
+    - Problèmes de connexion Bluetooth

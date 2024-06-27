@@ -1,0 +1,123 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'Je suis un Assistant' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Respond to troubleshoot printer
+  steps:
+  - intent: troubleshoot_printer
+  - action: utter_troubleshoot_printer
+
+- rule: Respond to driver issue
+  steps:
+  - intent: driver_issue
+  - action: utter_driver_issue
+
+- rule: Respond to PDF issue
+  steps:
+  - intent: pdf_issue
+  - action: utter_pdf_issue
+
+- rule: Respond to printing failure
+  steps:
+  - intent: printing_failure
+  - action: utter_printing_failure
+
+- rule: Respond to Outlook issue
+  steps:
+  - intent: outlook_issue
+  - action: utter_outlook_issue
+
+- rule: Respond to network issue
+  steps:
+  - intent: network_issue
+  - action: utter_network_issue
+
+- rule: Respond to storage issue
+  steps:
+  - intent: storage_issue
+  - action: utter_storage_issue
+
+- rule: Respond to power issue
+  steps:
+  - intent: power_issue
+  - action: utter_power_issue
+
+- rule: Fallback rule
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: Respond to scanner issue
+  steps:
+  - intent: scanner_issue
+  - action: utter_scanner_issue
+
+- rule: Respond to wifi issue
+  steps:
+  - intent: wifi_issue
+  - action: utter_wifi_issue
+
+- rule: Respond to email sync issue
+  steps:
+  - intent: email_sync_issue
+  - action: utter_email_sync_issue
+
+- rule: Respond to software install issue
+  steps:
+  - intent: software_install_issue
+  - action: utter_software_install_issue 
+
+- rule: Respond to printer blank pages
+  steps:
+  - intent: printer_blank_pages
+  - action: utter_printer_blank_pages
+
+- rule: Respond to printer paper jam
+  steps:
+  - intent: printer_paper_jam
+  - action: utter_printer_paper_jam
+
+- rule: Respond to app not responding
+  steps:
+  - intent: app_not_responding
+  - action: utter_app_not_responding
+
+- rule: Respond to slow computer
+  steps:
+  - intent: slow_computer
+  - action: utter_slow_computer
+
+- rule: Respond to computer won't turn on
+  steps:
+  - intent: computer_wont_turn_on
+  - action: utter_computer_wont_turn_on
+
+- rule: Respond to overheating computer
+  steps:
+  - intent: overheating_computer
+  - action: utter_overheating_computer
+
+- rule: Respond to VPN issue
+  steps:
+  - intent: vpn_issue
+  - action: utter_vpn_issue
+
+- rule: Respond to Bluetooth issue
+  steps:
+  - intent: bluetooth_issue
+  - action: utter_bluetooth_issue
+
+- rule: Respond using ChatGPT
+  steps:
+  - intent: ask_anything
+  - action: action_chatgpt  
